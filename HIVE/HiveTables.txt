@@ -1,0 +1,28 @@
+--NOW WE CREATE EXTERNAL TABLES IN THE HIVE DATABASE
+CREATE DATABASE <DATABASE NAME>;
+
+USE <DATABASE NAME>;
+
+DROP TABLE IF EXISTS title;
+CREATE EXTERNAL TABLE title STORED AS AVRO LOCATION '/user/anabig114224/hive/warehouse/Data/title' 
+TBLPROPERTIES ('avro.schema.url' = '/user/anabig114224/capstone/title.avsc');
+
+DROP TABLE IF EXISTS dept_emp;
+CREATE EXTERNAL TABLE Department_Employees STORED AS AVRO LOCATION '/user/anabig114224/hive/warehouse/Data/dept_emp' 
+TBLPROPERTIES ('avro.schema.url' = '/user/anabig114224/capstone/dept_emp.avsc');
+
+DROP TABLE IF EXISTS dept_mangr;
+CREATE EXTERNAL TABLE Department_Managers STORED AS AVRO LOCATION '/user/anabig114224/hive/warehouse/Data/dept_mangr' 
+TBLPROPERTIES ('avro.schema.url' = '/user/anabig114224/capstone/dept_mangr.avsc');
+
+DROP TABLE IF EXISTS departments;
+CREATE EXTERNAL TABLE departments STORED AS AVRO LOCATION '/user/anabig114224/hive/warehouse/EMP_DATA/Departments' 
+TBLPROPERTIES ('avro.schema.url' = '/user/anabig114224/capstone/Departments.avsc');
+
+DROP TABLE IF EXISTS salaries;
+CREATE EXTERNAL TABLE salaries STORED AS AVRO LOCATION '/user/anabig114224/hive/warehouse/Data/salaries' 
+TBLPROPERTIES ('avro.schema.url' = '/user/anabig114224/capstone/salaries.avsc');
+
+DROP TABLE IF EXISTS employees;
+CREATE EXTERNAL TABLE employees STORED AS AVRO LOCATION '/user/anabig114224/hive/warehouse/Data/employees' 
+TBLPROPERTIES ('avro.schema.url' = '/user/anabig114224/capstone/employees.avsc');
