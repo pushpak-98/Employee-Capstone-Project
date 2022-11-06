@@ -1,6 +1,6 @@
 # Employee-Capstone-Project
 # CAPSTONE PROJECT ON EMPLOYEES DATA
-## Introduction:
+## Summary:
 You have been hired as a new data engineer at Analytixlabs. Your first major task is a data engineering project on 
 employees of the one of the big corporation from the 1980s and 1995s. All that remain of the database of employees 
 from that period are six CSV files. In this project, you will design the tables to hold data in the CSVs, import the CSVs 
